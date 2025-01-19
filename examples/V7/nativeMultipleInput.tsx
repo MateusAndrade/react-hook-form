@@ -1,9 +1,13 @@
 import React from 'react';
-import { useForm, NestedValue } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 export default function App() {
-  const { register, errors, handleSubmit } = useForm<{
-    email: NestedValue<string[]>;
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm<{
+    email: string[];
   }>({
     defaultValues: {
       email: ['first@react.hook.form', 'last@react.hook.form'],

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useForm, NestedValue } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 
 let renderCounter = 0;
 
@@ -15,17 +15,17 @@ const SetValue: React.FC = () => {
     age: string;
     trigger: string;
     checkbox: boolean;
-    checkboxArray: string;
+    checkboxArray: string[];
     radio: string;
     select: string;
-    multiple: NestedValue<string[]>;
+    multiple: string[];
     array: string[];
     object: {
       firstName: string;
       lastName: string;
       middleName: string;
     };
-    nestedValue: NestedValue<string[]>;
+    nestedValue: string[];
   }>();
 
   useEffect(() => {
